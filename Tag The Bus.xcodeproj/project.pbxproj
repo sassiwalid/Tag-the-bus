@@ -97,12 +97,10 @@
 		0E8DFF1B1DDE2273005F9CF8 /* Tag The Bus */ = {
 			isa = PBXGroup;
 			children = (
-				0E8DFF1C1DDE2273005F9CF8 /* AppDelegate.swift */,
-				0E8DFF1E1DDE2273005F9CF8 /* ViewController.swift */,
-				0E8DFF201DDE2273005F9CF8 /* Main.storyboard */,
-				0E8DFF231DDE2273005F9CF8 /* Assets.xcassets */,
-				0E8DFF251DDE2273005F9CF8 /* LaunchScreen.storyboard */,
-				0E8DFF281DDE2273005F9CF8 /* Info.plist */,
+				0E8DFF511DDE352C005F9CF8 /* SupportingFiles */,
+				0E8DFF4E1DDE350D005F9CF8 /* Model */,
+				0E8DFF4F1DDE3518005F9CF8 /* Controller */,
+				0E8DFF501DDE3520005F9CF8 /* View */,
 			);
 			path = "Tag The Bus";
 			sourceTree = "<group>";
@@ -123,6 +121,40 @@
 				0E8DFF3E1DDE2273005F9CF8 /* Info.plist */,
 			);
 			path = "Tag The BusUITests";
+			sourceTree = "<group>";
+		};
+		0E8DFF4E1DDE350D005F9CF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0E8DFF4F1DDE3518005F9CF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E8DFF1E1DDE2273005F9CF8 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E8DFF501DDE3520005F9CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E8DFF251DDE2273005F9CF8 /* LaunchScreen.storyboard */,
+				0E8DFF201DDE2273005F9CF8 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0E8DFF511DDE352C005F9CF8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0E8DFF1C1DDE2273005F9CF8 /* AppDelegate.swift */,
+				0E8DFF231DDE2273005F9CF8 /* Assets.xcassets */,
+				0E8DFF281DDE2273005F9CF8 /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +544,7 @@
 				0E8DFF431DDE2273005F9CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E8DFF441DDE2273005F9CF8 /* Build configuration list for PBXNativeTarget "Tag The BusTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +553,7 @@
 				0E8DFF461DDE2273005F9CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E8DFF471DDE2273005F9CF8 /* Build configuration list for PBXNativeTarget "Tag The BusUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +562,7 @@
 				0E8DFF491DDE2273005F9CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
