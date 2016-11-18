@@ -9,7 +9,7 @@
 import Foundation
 class APIManager
 {
-    func loadData (urlString:String, completion:(result:String)->())
+    func loadData (urlString:String, completion:(result:[Stations])->())
     {
         let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
         
@@ -24,21 +24,29 @@ class APIManager
             {
                 dispatch_async(dispatch_get_main_queue())
                 {
-                    completion(result: (error!.localizedDescription))
+                    print(error!.localizedDescription)
                 }
             }
             else
             {
                 do
                 {
-                    if let json =  try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String: AnyObject]{
-                        print(json)
+                    if let json =  try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionnary,
+                        feed = json["data"] as? JSONDictionnary,
+                        Entries = feed["nearstations"] as? JSONArray
+                    
+                    {
+                        var stations = [Stations]()
+                        for entry in Entries{
+                            let entry = Stations(data:entry as! JSONDictionnary)
+                            stations.append(entry)
+                        }
                         let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                         dispatch_async(dispatch_get_global_queue(priority,0))
                         {
                             dispatch_async(dispatch_get_main_queue())
                             {
-                                completion(result:"JSON Serialisation successful")
+                                completion(result:stations)
                             }
                         }
                     }
@@ -47,7 +55,7 @@ class APIManager
                 {
                     dispatch_async(dispatch_get_main_queue())
                     {
-                        completion(result:"Erreur in JSON Serialisation ")
+                        print("Erreur in JSON Serialisation ")
                     }
                 }
                 // end Json serialisation
