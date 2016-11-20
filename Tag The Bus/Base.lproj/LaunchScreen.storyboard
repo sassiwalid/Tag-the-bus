@@ -23,23 +23,5 @@
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
-        <!--Details Stations Images-->
-        <scene sceneID="xut-5Q-FCW">
-            <objects>
-                <viewController id="uP2-Kx-KoT" customClass="DetailsStationsImages" customModule="Tag_The_Bus" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hh4-76-vux"/>
-                        <viewControllerLayoutGuide type="bottom" id="S8d-lV-UJK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MB1-Wv-xTv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mec-N8-6yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="828" y="375"/>
-        </scene>
     </scenes>
 </document>

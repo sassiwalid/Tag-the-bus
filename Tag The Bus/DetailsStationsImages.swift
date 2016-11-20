@@ -8,14 +8,20 @@
 
 import UIKit
 
-class DetailsStationsImages: UIViewController {
-
+class DetailsStationsImages: UIViewController, UIImagePickerControllerDelegate {
+    var stationName:String!
+    var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = stationName
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:.Add, target: self, action: #selector(addPicture))
         // Do any additional setup after loading the view.
     }
-
+    func addPicture()
+    {
+      imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+      presentViewController(imagePicker, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

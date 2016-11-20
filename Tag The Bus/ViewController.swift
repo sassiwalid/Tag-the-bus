@@ -66,11 +66,20 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         let station = stations[indexPath.row]
-        cell.accessoryType = UITableViewCellAccessoryType.DetailButton
+        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
         cell.textLabel?.text = station.StreetName
         return cell
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    if segue.identifier == "gotodetails" {
+    let backItem = UIBarButtonItem()
+    backItem.title = "Retour"
+    navigationItem.backBarButtonItem = backItem
+    let selectedTopic = stations[(TableView.indexPathForSelectedRow?.row)!]
+    let des = segue.destinationViewController as! DetailsStationsImages
+    des.stationName = selectedTopic.StreetName
+    }
+    }
 
 }
 
