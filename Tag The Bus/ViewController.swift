@@ -7,15 +7,37 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
- @IBOutlet weak var TableView: UITableView!
+import MapKit
+class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource,MKMapViewDelegate  {
+    @IBOutlet weak var Map: MKMapView!
+    @IBOutlet weak var TableView: UITableView!
     var stations = [Stations]()
+    var locations = [Location]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let location = CLLocationCoordinate2D(
+            latitude: 41.390205,
+            longitude: 2.154007
+        )
+        // 2
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        Map.setRegion(region, animated: true)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.ReachabiltyStatusChanged), name: "ReachStatusChanged", object: nil)
         ReachabiltyStatusChanged() 
     }
+    @IBAction func segmentSelectedAction(sender: AnyObject) {
+        switch sender.selectedSegmentIndex {
+        case 1 :
+            Map.hidden = false
+            TableView.hidden = true
+        case 0:
+            Map.hidden = true
+            TableView.hidden = false
+        default: break;
+        }
+    }
+
     func RunAPI()
     {
         let api = APIManager()
@@ -25,7 +47,13 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func didloadData(stations:[Stations])
     {
     self.stations = stations
-        TableView.reloadData()
+        print(stations.count)
+        for i in 0 ..< stations.count  {
+            let location = Location(title: stations[i].StreetName,coordinate: CLLocationCoordinate2D(latitude: Double(self.stations[i].lat)!, longitude:Double(self.stations[i].lon)!))
+            locations.append(location)
+        }
+    Map.addAnnotations(locations)
+    TableView.reloadData()
     }
     func ReachabiltyStatusChanged()
     {
@@ -49,7 +77,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         default:
             print(reachabilityStatus)
             RunAPI()
-            
         }
     }
     // appel de destructeur et destruction de l'observer

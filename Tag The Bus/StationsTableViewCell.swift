@@ -10,15 +10,16 @@ import UIKit
 
 class StationsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var stationImage: UIImageView!
+    @IBOutlet weak var Name: UILabel!
+    var photo : Photo?
+        {
+        didSet{
+           updatecell()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updatecell(){
+        stationImage.image = photo?.myphoto
+        Name.text = photo?.Name
     }
-
 }

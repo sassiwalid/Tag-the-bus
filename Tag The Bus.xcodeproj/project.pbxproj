@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5EB7831DE349AB00F99489 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EB7821DE349AB00F99489 /* Photo.swift */; };
+		0E5EB7851DE3643500F99489 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5EB7841DE3643500F99489 /* Photos.framework */; };
+		0E5EB7871DE371DA00F99489 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5EB7861DE371DA00F99489 /* Locations.swift */; };
 		0E7F46221DE0DEDB00926C3F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F46211DE0DEDB00926C3F /* Reachability.m */; };
 		0E8DFF1D1DDE2273005F9CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8DFF1C1DDE2273005F9CF8 /* AppDelegate.swift */; };
 		0E8DFF1F1DDE2273005F9CF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8DFF1E1DDE2273005F9CF8 /* ViewController.swift */; };
@@ -18,6 +21,7 @@
 		0E8DFF581DDE53DC005F9CF8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8DFF571DDE53DC005F9CF8 /* APIManager.swift */; };
 		0E97FEF01DE2214000B095A6 /* StationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E97FEEF1DE2214000B095A6 /* StationsTableViewCell.swift */; };
 		0E97FEF21DE2218600B095A6 /* DetailsStationsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E97FEF11DE2218600B095A6 /* DetailsStationsImages.swift */; };
+		0EC2F1E71DE24F7100209FB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC2F1E61DE24F7100209FB9 /* MapKit.framework */; };
 		0EED7E011DDF48D5002BDC91 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED7E001DDF48D5002BDC91 /* Constantes.swift */; };
 		0EED7E031DDF4974002BDC91 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED7E021DDF4974002BDC91 /* Stations.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E5EB7821DE349AB00F99489 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0E5EB7841DE3643500F99489 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		0E5EB7861DE371DA00F99489 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		0E7F461F1DE0DEDB00926C3F /* Tag The Bus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tag The Bus-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E7F46201DE0DEDB00926C3F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0E7F46211DE0DEDB00926C3F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		0E8DFF571DDE53DC005F9CF8 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0E97FEEF1DE2214000B095A6 /* StationsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewCell.swift; sourceTree = "<group>"; };
 		0E97FEF11DE2218600B095A6 /* DetailsStationsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsStationsImages.swift; sourceTree = "<group>"; };
+		0EC2F1E61DE24F7100209FB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0EED7E001DDF48D5002BDC91 /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		0EED7E021DDF4974002BDC91 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5EB7851DE3643500F99489 /* Photos.framework in Frameworks */,
+				0EC2F1E71DE24F7100209FB9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +115,7 @@
 				0E8DFF301DDE2273005F9CF8 /* Tag The BusTests */,
 				0E8DFF3B1DDE2273005F9CF8 /* Tag The BusUITests */,
 				0E8DFF1A1DDE2273005F9CF8 /* Products */,
+				0EC2F1E51DE24F7100209FB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +165,8 @@
 			children = (
 				0E8DFF571DDE53DC005F9CF8 /* APIManager.swift */,
 				0EED7E021DDF4974002BDC91 /* Stations.swift */,
+				0E5EB7821DE349AB00F99489 /* Photo.swift */,
+				0E5EB7861DE371DA00F99489 /* Locations.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -185,6 +198,15 @@
 				0E8DFF281DDE2273005F9CF8 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		0EC2F1E51DE24F7100209FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E5EB7841DE3643500F99489 /* Photos.framework */,
+				0EC2F1E61DE24F7100209FB9 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		0EED7DFF1DDF48BB002BDC91 /* Utils */ = {
@@ -341,10 +363,12 @@
 				0E8DFF581DDE53DC005F9CF8 /* APIManager.swift in Sources */,
 				0EED7E031DDF4974002BDC91 /* Stations.swift in Sources */,
 				0EED7E011DDF48D5002BDC91 /* Constantes.swift in Sources */,
+				0E5EB7831DE349AB00F99489 /* Photo.swift in Sources */,
 				0E97FEF01DE2214000B095A6 /* StationsTableViewCell.swift in Sources */,
 				0E8DFF1F1DDE2273005F9CF8 /* ViewController.swift in Sources */,
 				0E7F46221DE0DEDB00926C3F /* Reachability.m in Sources */,
 				0E8DFF1D1DDE2273005F9CF8 /* AppDelegate.swift in Sources */,
+				0E5EB7871DE371DA00F99489 /* Locations.swift in Sources */,
 				0E97FEF21DE2218600B095A6 /* DetailsStationsImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
