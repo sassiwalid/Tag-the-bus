@@ -15,11 +15,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var locations = [Location]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        // intialisation avec la carte de la ville de Barcelone
         let location = CLLocationCoordinate2D(
-            latitude: 41.390205,
-            longitude: 2.154007
+            latitude: 41.3985182,
+            longitude: 2.1917991
         )
-        // 2
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
         Map.setRegion(region, animated: true)
@@ -47,7 +47,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     func didloadData(stations:[Stations])
     {
     self.stations = stations
-        print(stations.count)
         for i in 0 ..< stations.count  {
             let location = Location(title: stations[i].StreetName,coordinate: CLLocationCoordinate2D(latitude: Double(self.stations[i].lat)!, longitude:Double(self.stations[i].lon)!))
             locations.append(location)
@@ -75,7 +74,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         alert.addAction(deleteAction)
         self.presentViewController(alert, animated: true, completion: nil)
         default:
-            print(reachabilityStatus)
             RunAPI()
         }
     }
@@ -107,6 +105,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     des.stationName = selectedTopic.StreetName
     }
     }
-
+    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        if control == annotationView.rightCalloutAccessoryView {
+            performSegueWithIdentifier("gotodetails", sender: self)
+        }
+    }
 }
 

@@ -1,25 +1,27 @@
 //
-//  StationsTableViewCell.swift
+//  CustomCell.swift
 //  Tag The Bus
 //
-//  Created by Walid Sassi on 20/11/2016.
+//  Created by Walid Sassi on 21/11/2016.
 //  Copyright © 2016 Walid Sassi. All rights reserved.
 //
 
 import UIKit
 
-class StationsTableViewCell: UITableViewCell {
-
+class CustomCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var nom: UILabel!
     @IBOutlet weak var stationImage: UIImageView!
-    @IBOutlet weak var Name: UILabel!
     var photo : Photo?
         {
         didSet{
-           updatecell()
+            updatecell()
         }
     }
     func updatecell(){
+        nom.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         stationImage.image = photo?.myphoto
-        Name.text = photo?.Name
+        nom.text = photo?.Name
     }
 }

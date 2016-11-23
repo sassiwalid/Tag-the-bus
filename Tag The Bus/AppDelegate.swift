@@ -9,7 +9,6 @@
 import UIKit
 var reachability : Reachability?
 var reachabilityStatus = " "
-var PhotosArray: [Photo] = []
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
