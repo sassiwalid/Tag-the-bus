@@ -26,7 +26,7 @@ class DetailsStationsImages: UIViewController,UINavigationControllerDelegate, UI
     }
     func addPicture()
     {
-    imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+    imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
     presentViewController(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
